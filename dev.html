@@ -1,4 +1,386 @@
-UPDATE 1
-CHANGE IN REMOTE REPO
-POLL SCM CHANGE
-AAYUSH CHANGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Toolset Overview</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding-bottom:50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.45);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:12px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.blue{background:#2563eb;}
+.green{background:#16a34a;}
+.orange{background:#ea580c;}
+.purple{background:#9333ea;}
+.red{background:#dc2626;}
+.gray{background:#475569;}
+
+ul{
+    margin-left:18px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.pipeline{
+    margin:60px 0;
+}
+
+.pipeline h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.flow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    align-items:center;
+}
+
+.step{
+    background:#2563eb;
+    padding:16px 24px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:28px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    background:#2563eb;
+    padding:14px;
+}
+
+td{
+    background:#1e293b;
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tr:hover td{
+    background:#334155;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+header h1{
+font-size:30px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🚀 DevOps Toolset Overview</h1>
+<p>Popular tools used throughout the DevOps lifecycle.</p>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📦</div>
+<h2>Git</h2>
+<span class="badge orange">Version Control</span>
+<ul>
+<li>Source code management</li>
+<li>Branching & merging</li>
+<li>Pull Requests</li>
+<li>Collaboration</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h2>Jenkins</h2>
+<span class="badge red">CI</span>
+<ul>
+<li>Build automation</li>
+<li>Run unit tests</li>
+<li>Create artifacts</li>
+<li>Pipeline automation</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🐳</div>
+<h2>Docker</h2>
+<span class="badge blue">Containers</span>
+<ul>
+<li>Containerization</li>
+<li>Portable applications</li>
+<li>Image management</li>
+<li>Fast deployments</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">☸</div>
+<h2>Kubernetes</h2>
+<span class="badge green">Orchestration</span>
+<ul>
+<li>Container orchestration</li>
+<li>Scaling</li>
+<li>Self-healing</li>
+<li>Load balancing</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🚢</div>
+<h2>Argo CD</h2>
+<span class="badge purple">GitOps</span>
+<ul>
+<li>Continuous Delivery</li>
+<li>GitOps deployments</li>
+<li>Auto sync</li>
+<li>Rollback support</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🏗️</div>
+<h2>Terraform</h2>
+<span class="badge gray">Infrastructure as Code</span>
+<ul>
+<li>Create cloud resources</li>
+<li>Multi-cloud support</li>
+<li>Infrastructure automation</li>
+<li>Version-controlled infrastructure</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">📜</div>
+<h2>Ansible</h2>
+<span class="badge green">Configuration</span>
+<ul>
+<li>Server configuration</li>
+<li>Application deployment</li>
+<li>Agentless automation</li>
+<li>YAML playbooks</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h2>Prometheus</h2>
+<span class="badge blue">Monitoring</span>
+<ul>
+<li>Collect metrics</li>
+<li>Alerting</li>
+<li>Time-series database</li>
+<li>Performance monitoring</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h2>Grafana</h2>
+<span class="badge orange">Visualization</span>
+<ul>
+<li>Dashboards</li>
+<li>Monitoring visualization</li>
+<li>Alerts</li>
+<li>Multiple data sources</li>
+</ul>
+</div>
+
+</div>
+
+<div class="pipeline">
+
+<h2>Typical DevOps Workflow</h2>
+
+<div class="flow">
+<div class="step">👨‍💻 Code</div>
+<div class="arrow">➡</div>
+<div class="step">📦 Git</div>
+<div class="arrow">➡</div>
+<div class="step">⚙ Jenkins</div>
+<div class="arrow">➡</div>
+<div class="step">🐳 Docker</div>
+<div class="arrow">➡</div>
+<div class="step">🏗 Terraform</div>
+<div class="arrow">➡</div>
+<div class="step">📜 Ansible</div>
+<div class="arrow">➡</div>
+<div class="step">☸ Kubernetes</div>
+<div class="arrow">➡</div>
+<div class="step">🚢 Argo CD</div>
+<div class="arrow">➡</div>
+<div class="step">📊 Prometheus</div>
+<div class="arrow">➡</div>
+<div class="step">📈 Grafana</div>
+</div>
+
+</div>
+
+<h2 style="text-align:center;margin-bottom:20px;">DevOps Tool Comparison</h2>
+
+<table>
+
+<tr>
+<th>Tool</th>
+<th>Category</th>
+<th>Main Purpose</th>
+</tr>
+
+<tr>
+<td>Git</td>
+<td>SCM</td>
+<td>Version Control</td>
+</tr>
+
+<tr>
+<td>Jenkins</td>
+<td>CI</td>
+<td>Build & Test Automation</td>
+</tr>
+
+<tr>
+<td>Docker</td>
+<td>Containers</td>
+<td>Package Applications</td>
+</tr>
+
+<tr>
+<td>Kubernetes</td>
+<td>Orchestration</td>
+<td>Manage Containers</td>
+</tr>
+
+<tr>
+<td>Argo CD</td>
+<td>CD</td>
+<td>GitOps Deployment</td>
+</tr>
+
+<tr>
+<td>Terraform</td>
+<td>IaC</td>
+<td>Provision Infrastructure</td>
+</tr>
+
+<tr>
+<td>Ansible</td>
+<td>Configuration</td>
+<td>Server Automation</td>
+</tr>
+
+<tr>
+<td>Prometheus</td>
+<td>Monitoring</td>
+<td>Collect Metrics</td>
+</tr>
+
+<tr>
+<td>Grafana</td>
+<td>Visualization</td>
+<td>Dashboards & Alerts</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<h3>💡 DevOps Lifecycle</h3>
+<p style="margin-top:10px;">
+Plan → Code → Build → Test → Package → Provision → Configure → Deploy → Monitor → Improve
+</p>
+</footer>
+
+</body>
+</html>
