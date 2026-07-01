@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing Tools in DevOps</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#111827,#1e293b);
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.card{
+    background:#1f2937;
+    padding:25px;
+    border-radius:18px;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:10px 0 15px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.blue{background:#2563eb;}
+.green{background:#16a34a;}
+.orange{background:#ea580c;}
+.purple{background:#7c3aed;}
+.red{background:#dc2626;}
+
+ul{
+    margin-left:18px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:40px 0;
+}
+
+th{
+    background:#2563eb;
+    padding:14px;
+}
+
+td{
+    background:#1f2937;
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tr:hover td{
+    background:#374151;
+}
+
+.pipeline{
+    margin:60px 0;
+}
+
+.pipeline h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.flow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+.step{
+    background:#2563eb;
+    padding:15px 22px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:28px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#9ca3af;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🧪 Testing Tools in DevOps</h1>
+<p>Automated testing is an essential stage in every CI/CD pipeline.</p>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✅</div>
+<h2>JUnit</h2>
+<span class="badge blue">Unit Testing</span>
+<ul>
+<li>Java unit testing framework</li>
+<li>Fast test execution</li>
+<li>Assertions & test reports</li>
+<li>Integrates with Jenkins</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h2>Selenium</h2>
+<span class="badge green">UI Testing</span>
+<ul>
+<li>Browser automation</li>
+<li>Cross-browser testing</li>
+<li>Supports multiple languages</li>
+<li>Regression testing</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">⚡</div>
+<h2>Postman</h2>
+<span class="badge orange">API Testing</span>
+<ul>
+<li>REST API testing</li>
+<li>Collections</li>
+<li>Automation scripts</li>
+<li>Environment variables</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h2>JMeter</h2>
+<span class="badge purple">Performance Testing</span>
+<ul>
+<li>Load testing</li>
+<li>Stress testing</li>
+<li>Performance analysis</li>
+<li>Scalable test plans</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">🔒</div>
+<h2>OWASP ZAP</h2>
+<span class="badge red">Security Testing</span>
+<ul>
+<li>Vulnerability scanning</li>
+<li>Web application security</li>
+<li>DAST testing</li>
+<li>CI/CD integration</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h2>SonarQube</h2>
+<span class="badge blue">Code Quality</span>
+<ul>
+<li>Static code analysis</li>
+<li>Detect bugs</li>
+<li>Security hotspots</li>
+<li>Code coverage reports</li>
+</ul>
+</div>
+
+</div>
+
+<section class="pipeline">
+<h2>Testing Stage in CI/CD</h2>
+
+<div class="flow">
+<div class="step">👨‍💻 Code</div>
+<div class="arrow">➡</div>
+<div class="step">Git</div>
+<div class="arrow">➡</div>
+<div class="step">Jenkins</div>
+<div class="arrow">➡</div>
+<div class="step">JUnit</div>
+<div class="arrow">➡</div>
+<div class="step">Selenium</div>
+<div class="arrow">➡</div>
+<div class="step">SonarQube</div>
+<div class="arrow">➡</div>
+<div class="step">Docker</div>
+<div class="arrow">➡</div>
+<div class="step">Deploy</div>
+</div>
+
+</section>
+
+<h2 style="text-align:center;margin-bottom:20px;">Testing Tool Comparison</h2>
+
+<table>
+
+<tr>
+<th>Tool</th>
+<th>Testing Type</th>
+<th>Primary Use</th>
+</tr>
+
+<tr>
+<td>JUnit</td>
+<td>Unit Testing</td>
+<td>Test Java Classes</td>
+</tr>
+
+<tr>
+<td>Selenium</td>
+<td>UI Testing</td>
+<td>Browser Automation</td>
+</tr>
+
+<tr>
+<td>Postman</td>
+<td>API Testing</td>
+<td>REST API Validation</td>
+</tr>
+
+<tr>
+<td>JMeter</td>
+<td>Performance</td>
+<td>Load & Stress Testing</td>
+</tr>
+
+<tr>
+<td>OWASP ZAP</td>
+<td>Security</td>
+<td>Vulnerability Scanning</td>
+</tr>
+
+<tr>
+<td>SonarQube</td>
+<td>Code Quality</td>
+<td>Static Code Analysis</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<h3>✔ Testing Pyramid</h3>
+<p style="margin-top:10px;">
+Unit Tests → Integration Tests → API Tests → UI Tests → Performance & Security Tests
+</p>
+</footer>
+
+</body>
+</html>
