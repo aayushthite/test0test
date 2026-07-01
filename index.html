@@ -1,2 +1,333 @@
-Velocity Clases 
-Learning Jenkins and Docker
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CI/CD Tools Comparison</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.45);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+.tag{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.jenkins{background:#ef4444;}
+.argo{background:#3b82f6;}
+.git{background:#f97316;}
+
+ul{
+    margin-left:20px;
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.compare{
+    margin-top:50px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+th{
+    background:#2563eb;
+    padding:16px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    background:#1e293b;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tr:hover td{
+    background:#334155;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:#94a3b8;
+}
+
+.pipeline{
+    margin-top:60px;
+}
+
+.flow{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.step{
+    background:#2563eb;
+    padding:18px 28px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:32px;
+}
+
+@media(max-width:700px){
+    h1{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 CI/CD Tools Comparison</h1>
+<p class="subtitle">
+Understand the difference between Git, Jenkins, and Argo CD in a modern DevOps pipeline.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📦</div>
+<h2>Git</h2>
+<span class="tag git">Version Control</span>
+
+<ul>
+<li>Stores source code</li>
+<li>Tracks code history</li>
+<li>Supports branching & merging</li>
+<li>Collaboration using Pull Requests</li>
+<li>Triggers CI pipelines</li>
+</ul>
+
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h2>Jenkins</h2>
+<span class="tag jenkins">CI Server</span>
+
+<ul>
+<li>Builds applications</li>
+<li>Runs automated tests</li>
+<li>Creates deployment artifacts</li>
+<li>Supports thousands of plugins</li>
+<li>Automates software pipelines</li>
+</ul>
+
+</div>
+
+<div class="card">
+<div class="icon">🚢</div>
+<h2>Argo CD</h2>
+<span class="tag argo">GitOps CD</span>
+
+<ul>
+<li>Kubernetes deployment</li>
+<li>Git is the source of truth</li>
+<li>Auto Sync applications</li>
+<li>Rollback support</li>
+<li>Continuous Delivery using GitOps</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="pipeline">
+
+<h2 style="text-align:center;margin-bottom:30px;">
+Modern CI/CD Workflow
+</h2>
+
+<div class="flow">
+
+<div class="step">👨‍💻 Developer</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">📦 Git</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">⚙️ Jenkins</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">🐳 Docker Image</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">📂 GitOps Repo</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">🚢 Argo CD</div>
+
+<div class="arrow">➡️</div>
+
+<div class="step">☸ Kubernetes</div>
+
+</div>
+
+</div>
+
+<div class="compare">
+
+<h2 style="margin-bottom:20px;text-align:center;">
+Feature Comparison
+</h2>
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>Git</th>
+<th>Jenkins</th>
+<th>Argo CD</th>
+</tr>
+
+<tr>
+<td>Primary Purpose</td>
+<td>Version Control</td>
+<td>Continuous Integration</td>
+<td>Continuous Delivery</td>
+</tr>
+
+<tr>
+<td>Stores Code</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td>Build Applications</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td>Run Tests</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td>Deploy Applications</td>
+<td>❌</td>
+<td>Optional</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>Kubernetes Native</td>
+<td>❌</td>
+<td>Limited</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>GitOps</td>
+<td>Supports</td>
+<td>No</td>
+<td>✅ Native</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="footer">
+<h3>💡 Quick Summary</h3>
+
+<p style="margin-top:10px;">
+<b>Git</b> manages your code.<br><br>
+
+<b>Jenkins</b> builds, tests, and packages your application.<br><br>
+
+<b>Argo CD</b> continuously deploys your application to Kubernetes using GitOps.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
